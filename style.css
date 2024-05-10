@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --Primary-Color1: hsl(158, 36%, 37%);
+  --Primary-Color2: hsl(30, 38%, 92%);
+  --Secondry-Color1: hsl(212, 21%, 14%);
+  --Secondry-Color2: hsl(228, 12%, 48%);
+  --Secondry-Color3: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main {
+  height: 100vh;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Primary-Color2);
+}
+.container {
+  display: flex;
+  border-radius: 10px;
+  background-color: var(--Secondry-Color3);
+}
+.left img {
+  width: 310px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+}
+
+.right {
+  width: 300px;
+  padding: 2rem 2rem;
+}
+
+.right h3 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.right h1 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-family: "Fraunces", sans-serif;
+}
+
+.right p {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 1rem;
+  line-height: 1.5rem;
+  font-size: 14px;
+}
+
+.right .price {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-top: 1.5rem;
+}
+.price span {
+  text-decoration: line-through;
+  opacity: 0.5;
+  font-family: "Montserrat", sans-serif;
+}
+
+.right h2 {
+  font-size: 2rem;
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+  color: var(--Primary-Color1);
+}
+
+.right button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  margin-top: 1rem;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-top: 3rem;
+  font-weight: 700;
+  color: var(--Secondry-Color3);
+  background-color: var(--Primary-Color1);
+  cursor: pointer;
+}
+
+@media (max-width: 650px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    overflow: hidden;
+  }
+  .left,
+  .right {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  .left img {
+    width: 100%;
+    height: 230px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .right {
+    width: 350px;
+    padding: 1rem 1.2rem;
+  }
+
+  .right h2 {
+    font-size: 1.8rem;
+  }
+  .right p {
+    font-size: 12px;
+    margin-top: 0.5rem;
+  }
+  .right h1 {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+  }
+  .price span {
+    font-size: 15px;
+  }
+
+  .right button {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    padding: 0.8rem;
+  }
+  .left img {
+    content: url("images/image-product-mobile.jpg");
+  }
+}
